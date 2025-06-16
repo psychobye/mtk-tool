@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_delete"
+        android:title="Удалить" />
+    <item
+        android:id="@+id/action_replace"
+        android:title="Заменить" />
+    <item
+        android:id="@+id/action_add"
+        android:title="Добавить" />
+</menu>

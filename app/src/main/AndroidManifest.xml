@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.psych.mtktool">
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+
+    <permission
+        android:name=".permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="by.lsdsl.gta.imgtool.permission.C2D_MESSAGE"/>
+    <application
+        android:theme="@style/Theme.AppCompat"
+        android:label="MTK TOOL"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true">
+        <activity
+            android:name=".MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="screenSize|orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+                <data
+                    android:mimeType="*/*"
+                    android:scheme="file"
+                    android:host="*"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@android:style/Theme.Dialog"
+            android:label="@string/app_name"
+            android:name="com.lamerman.FileDialog"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme.Dialog"
+            android:label="@string/max_dialog_name"
+            android:name=".FixNameActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <uses-library
+            android:name="com.sec.android.app.multiwindow"
+            android:required="false"/>
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="true"/>
+        <meta-data
+            android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W"
+            android:resource="@dimen/app_defaultsize_w"/>
+        <meta-data
+            android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H"
+            android:resource="@dimen/app_defaultsize_h"/>
+        <meta-data
+            android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W"
+            android:resource="@dimen/app_minimumsize_w"/>
+        <meta-data
+            android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H"
+            android:resource="@dimen/app_minimumsize_h"/>
+        <activity
+            android:theme="@style/Dexter.Internal.Theme.Transparent"
+            android:name="com.karumi.dexter.DexterActivity"/>
+    </application>
+</manifest>

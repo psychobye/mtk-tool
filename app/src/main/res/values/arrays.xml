@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="changes">
+        <item>Added Rename feature, improve Replace</item>
+        <item>Opening IMG from any file manager. Multi-delete, multi-extract.</item>
+        <item>Add file crash fix. Samsung multi-window support.</item>
+        <item>Added GTA:San Andreas support.</item>
+        <item>Rebuild archive feature.</item>
+        <item>Multi-add feature.</item>
+        <item>Add/Replace crash fix.</item>
+        <item>Rebuild and extract crash fix.</item>
+        <item>Fixed errors during writing data to the archive.</item>
+        <item>Add with Replace feature.</item>
+        <item>Select All files feature in File Dialog.</item>
+        <item>San Andreas audio fixer (fix idx)</item>
+    </array>
+    <array name="changes_version">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>9</item>
+        <item>10</item>
+        <item>12</item>
+        <item>13</item>
+        <item>16</item>
+        <item>18</item>
+        <item>19</item>
+        <item>21</item>
+    </array>
+</resources>

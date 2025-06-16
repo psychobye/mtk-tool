@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add_file"
+        android:title="@string/add_file"/>
+    <item
+        android:id="@+id/add_with_replace"
+        android:title="@string/add_replace_file"/>
+    <item
+        android:id="@+id/selectAll"
+        android:title="@string/select_all"/>
+    <item
+        android:id="@+id/unselectAll"
+        android:title="@string/unselect_all"/>
+    <item
+        android:id="@+id/rebuild"
+        android:title="@string/rebuild"/>
+    <item
+        android:id="@+id/open_img"
+        android:title="@string/open_img"/>
+    <item
+        android:id="@+id/saaf"
+        android:title="@string/saaf"/>
+    <item
+        android:id="@+id/txd"
+        android:visible="false"
+        android:title="@string/txd_tool"/>
+    <item
+        android:id="@+id/about"
+        android:title="@string/about"/>
+</menu>
